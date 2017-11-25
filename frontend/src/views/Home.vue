@@ -1,22 +1,28 @@
 <template>
-  <div class="home-container">
-  <b-container>
-    <b-row align-h="center">
-      <b-col cols="6" class="home-div">
-        <img src="../assets/contacts.png">
-      </b-col>
-      <b-col cols="6" class="home-div">
-        <img src="../assets/events.png">
-      </b-col>
-      <b-col cols="6" class="home-div">
-        <img src="../assets/timer.png">
-      </b-col>
-      <b-col cols="6" class="home-div">
-        <img src="../assets/settings.png">
-      </b-col>
-    </b-row>
-  </b-container>
 
+  <div class="main-div">
+    <div class="header-div">
+      <img src="../assets/KJlogo.png">
+    </div>
+
+    <b-container class="home-container">
+      <b-row align-h="center">
+        <b-col cols="6" class="home-div">
+          <img src="../assets/contacts.png">
+        </b-col>
+        <b-col cols="6" class="home-div">
+          <img src="../assets/events.png">
+        </b-col>
+      </b-row>
+      <b-row align-h="center">
+        <b-col cols="6" class="home-div">
+          <img src="../assets/timer.png">
+        </b-col>
+        <b-col cols="6" class="home-div">
+          <img src="../assets/settings.png">
+        </b-col>
+      </b-row>
+    </b-container>
   </div>
 </template>
 
@@ -44,19 +50,28 @@ a {
   color: #42b983;
 }
 
-.home-container{
-  width: 500dp;
-  height: 350dp;
-  top: 100px;
+.header-div{
+  position: fixed;
+  top: 0;
+  height: inherit;
+  background-color: red;
 }
 
-img{
+.home-container{
+  position: relative;
+  margin-top: 100px;
+}
+
+.home-div img{
   height: 70%;
   width: inherit;
   position: relative;
   background-color: #10518a;
   padding: 20px;
+}
 
+.home-div{
+  margin: 0;
 }
 
 </style>
