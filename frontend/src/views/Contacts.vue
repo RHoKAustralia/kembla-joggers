@@ -1,10 +1,16 @@
 <template>
   <div class="container">
-    <b-modal ref="userEditModal" title="">
-      <p class="my-4">Hello from modal!</p>
+    <b-card>
+      <b-row>
+        <b-col cols="6">
+          <b-form-input v-model="searchValue" type="text" placeholder="Search"></b-form-input>
+        </b-col>
+      </b-row>
+    <b-modal size="lg" ref="userEditModal" title="" class="user-edit-modal">
       <user-edit-form :user="selectedUser"></user-edit-form>
     </b-modal>
-    <user-list v-on:editUserClicked="editUserClicked()" :users="users"></user-list>
+    <user-list v-on:editUserClicked="editUserClicked" :users="searchedUsers"></user-list>
+    </b-card>
   </div>
 </template>
 
@@ -16,17 +22,19 @@ export default {
   data: () => {
     return {
       selectedUser: {},
+      searchValue: "",
+      users: {}
     }
   },
   methods: {
     editUserClicked: function(user) {
+      console.log(user);
       this.selectedUser = user;
       this.$refs.userEditModal.show()      
     }
   },
-  computed: {
-    users: function() {
-      const userList = [];
+  mounted() {
+    const userList = [];
       for(let i = 0; i < 30; i ++) {
         const user = {
           name: Math.random().toString(36).substring(7),
@@ -37,7 +45,17 @@ export default {
         }
         userList.push(user);
       }
-      return userList;
+      this.users = userList;
+  },
+  computed: {
+    searchedUsers: function() {
+      if (this.searchValue) {
+        return this.users.filter(user => {
+          return user.name.includes(this.searchValue)
+        });
+      } else {
+        return this.users;
+      }
     }
   },
   components: {
@@ -50,5 +68,9 @@ export default {
 <style scoped>
 .container {
   height: 100%;
+}
+
+.user-edit-modal {
+  width:800px;
 }
 </style>
