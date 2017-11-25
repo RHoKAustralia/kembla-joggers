@@ -25,7 +25,7 @@ export default {
   name: 'HelloWorld',
   data () {
     return {
-      msg: 'Welcome to Kembla jogger'
+      msg: 'Welcome to Kembla Joggers'
     }
   }
 }
