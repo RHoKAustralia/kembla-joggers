@@ -11,11 +11,10 @@
   "dependencies": {
     "compression": "^1.7.1",
     "cors": "^2.8.4",
+    "dotenv": "^4.0.0",
     "express": "^4.16.2",
     "firebase": "^4.6.2",
     "yargs": "^10.0.3"
   },
-  "devDependencies": {
-    "dotenv": "^4.0.0"
-  }
+  "devDependencies": {}
 }
