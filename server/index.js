@@ -130,7 +130,7 @@ app.firebase = firebase.initializeApp({
 
 config.apiPrefix = '/api/v0/';
 
-(async () =>
+(async() =>
 {
   for (let file of fs.readdirSync(path.join(path.dirname(__filename), 'api')))
   {
