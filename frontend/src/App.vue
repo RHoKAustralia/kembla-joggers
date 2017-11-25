@@ -20,4 +20,12 @@ export default {
   margin-top: 60px;
   height: 100%;
 }
+
+img {
+  height: 100px;
+  position: absolute;
+  top: 0px;
+  left: 16px;
+  font-size: 18px;
+}
 </style>

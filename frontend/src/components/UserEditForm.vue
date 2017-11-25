@@ -16,11 +16,18 @@
       </b-col>
     </b-row>
     <b-row>
-      <b-col cols="4">
-        <span class="bold-edit-user-text" > Barcode: </span> {{ user.barcode }}
+      <b-col cols="6">
+          <div v-if="editBarcode">
+            <b-form-input type="text" :placeholder="user.barcode"></b-form-input>
+          </div>
+          <div v-else>
+            <span class="bold-edit-user-text" > Barcode: </span> {{ user.barcode }}
+            <a v-on:click="handleEditClick" href="#"> Add Edit </a>
+          </div>
+          
       </b-col>
       <b-col>
-        <a href="#"> Add Edit </a>
+        
       </b-col>
     </b-row>
   </div>
@@ -33,6 +40,9 @@ export default {
   methods: {
     submit: function(user) {
       this.$emit(user);
+    },
+    handleEditClick: function() {
+      this.editBarcode = true;
     }
   },
   data() {
@@ -41,7 +51,9 @@ export default {
       statusOptions: [
         { text: 'Active', value: 'active' },
         { text: 'Inactive', value: 'inactive' }        
-      ]
+      ],
+      updated: {},
+      editBarcode: false,
     }
   }
 }
