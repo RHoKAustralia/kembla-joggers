@@ -23,7 +23,7 @@ const config = yargs
     'port': {
       'alias': 'p',
       'description': 'Port where the service should run',
-      'default': 8080,
+      'default': 8080 || process.env.PORT,
       'type': 'number'
     },
     'static': {
