@@ -58,6 +58,15 @@ const config = yargs
     firebaseMessagingSenderId: {
       'default': process.env.FIREBASE_MESSAGING_SENDER_ID || '',
     },
+    tidyHqApiPrefix: {
+      'default': process.env.TIDYHQ_API_PREFIX || 'https://api.tidyhq.com/v1',
+    },
+    tidyHqAuthorizationUrl: {
+      'default': process.env.TIDYHQ_AUTHORIZATION_URL || 'https://accounts.tidyhq.com/oauth/authorize',
+    },
+    tidyHqTokenUrl: {
+      'default': process.env.TIDYHQ_TOKEN_URL || 'https://accounts.tidyhq.com/oauth/token',
+    },
     tidyHqClientId: {
       'default': process.env.TIDYHQ_CLIENT_ID || '',
     },
@@ -141,7 +150,7 @@ app.firebase = firebase.initializeApp({
   messagingSenderId: config.firebaseMessagingSenderId
 });
 
-config.apiPrefix = '/api/v0/';
+config.apiPrefix = '/api/v0';
 
 // authentication
 auth(app, config);
