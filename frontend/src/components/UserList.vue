@@ -6,7 +6,7 @@
       <tr>
         <th>Name</th>
         <th>Status</th>
-        <th>Member Number</th>      
+        <th>Member #</th>      
         <th>Barcode</th>
         <th>Age Group</th>
         <th>Edit</th>
