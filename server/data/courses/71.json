@@ -1,0 +1,20 @@
+{
+ "courseName": "8km Road",
+ "location": {
+  "location": "Cordeaux Dam",
+  "address": "Cordeaux Dam, Wilton NSW 2571",
+  "latitude": "-34.326863",
+  "longtitude": "150.746935"
+ },
+ "surface": "Road",
+ "distance": 8,
+ "units": "Kilometres",
+ "penaltyBuffer": "0:01:30.00",
+ "relayDetails": "No",
+ "minAge31Dec": 17,
+ "id": "71",
+ "handicap": {
+  "factor": 1.8,
+  "cutoff": 0
+ }
+}

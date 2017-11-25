@@ -8,11 +8,10 @@ const userAccountsExpressBoilerplate = require('node-user-accounts-boilerplate')
 
 const fs = require('fs');
 const path = require('path');
-const NoAuth = require('node-user-accounts-boilerplate/auth/NoAuth');
+const TidyHQAuth = require('./misc/TidyHQAuth');
 
 // will read the '.env' dorfile and add config to process.env
-require('dotenv')
-  .config();
+require('dotenv').config();
 
 async function initialiseCollection(context, searchMeta = {}, Collection = CachedCollection, Storage, Search, name)
 {
@@ -41,16 +40,18 @@ async function initialiseCollection(context, searchMeta = {}, Collection = Cache
 
 async function initialiseCollections(context)
 {
+  const collections = require('./collections/index')
   const CachedCollection = require('node-collections-boilerplate/CachedCollection');
   let Storage = require('node-collections-boilerplate/storage/FSStorage');
   let Search = require('node-collections-boilerplate/search/NoSearch');
 
   context.users = await initialiseCollection(context, {}, CachedCollection, Storage, Search, 'users');
   context.sessions = await initialiseCollection(context, {}, CachedCollection, Storage, Search, 'sessions');
-  context.contacts = await initialiseCollection(context, {}, CachedCollection, Storage, Search, 'contacts');
-  context.events = await initialiseCollection(context, {}, CachedCollection, Storage, Search, 'events');
-  context.races = await initialiseCollection(context, {}, CachedCollection, Storage, Search, 'races');
-  context.courses = await initialiseCollection(context, {}, CachedCollection, Storage, Search, 'courses');
+
+  for (let collection in collections)
+  {
+    context[collection] = await initialiseCollection(context, collections[collection].searchMeta, CachedCollection, Storage, Search, collection);
+  }
 }
 
 /**
@@ -82,8 +83,10 @@ async function initialiseAccounts(context)
   // authentication methods
   accounts.auth = [];
 
-  accounts.loginUserId = 'volunteer';
-  accounts.auth.push(new NoAuth(accounts));
+  // accounts.loginUserId = 'volunteer';
+  // accounts.TidyHQClientID = context.tidyHqClientId;
+  // accounts.TidyHqTokenURL = context.tidyHqTokenUrl;
+  // accounts.auth.push(new TidyHQAuth(accounts));
 
   userAccountsExpressBoilerplate(context.app, accounts);
 }
@@ -97,9 +100,9 @@ async function initialise(context, done)
   await initialiseCollections(context);
   await initialiseAccounts(context);
   // await initialiseAPI(context);
-  for (let file of fs.readdirSync(path.join(path.dirname(__filename), 'api')))
+  for (let module of ['collections'])
   {
-    const plugin = require(`./api/${file}`);
+    const plugin = require(`./api/${module}`);
     await plugin(context);
   }
 
@@ -116,12 +119,6 @@ expressBoilerplate({
     'data-endpoint': {
       default: path.join(path.dirname(__filename), 'data') + '/'
     },
-    tidyHqAuthorizationUrl: {
-      'default': process.env.TIDYHQ_AUTHORIZATION_URL || 'https://accounts.tidyhq.com/oauth/authorize',
-    },
-    tidyHqTokenUrl: {
-      'default': process.env.TIDYHQ_TOKEN_URL || 'https://accounts.tidyhq.com/oauth/token',
-    },
     tidyHqClientId: {
       'default': process.env.TIDYHQ_CLIENT_ID || '',
     },
@@ -129,5 +126,5 @@ expressBoilerplate({
       'default': process.env.TIDYHQ_CLIENT_SECRET || '',
     },
   },
-initialise
+  initialise
 });

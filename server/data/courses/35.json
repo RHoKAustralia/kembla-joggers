@@ -1,0 +1,13 @@
+{
+ "courseName": "200m",
+ "surface": "Grass",
+ "distance": 200,
+ "units": "Metres",
+ "relayDetails": "No",
+ "minAge31Dec": 1,
+ "id": "35",
+ "handicap": {
+  "factor": null,
+  "cutoff": null
+ }
+}

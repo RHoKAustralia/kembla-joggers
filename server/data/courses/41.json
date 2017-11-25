@@ -1,0 +1,13 @@
+{
+ "courseName": "500m",
+ "surface": "Grass",
+ "distance": 500,
+ "units": "Metres",
+ "relayDetails": "No",
+ "minAge31Dec": 1,
+ "id": "41",
+ "handicap": {
+  "factor": null,
+  "cutoff": null
+ }
+}

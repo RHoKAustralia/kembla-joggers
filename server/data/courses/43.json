@@ -1,0 +1,13 @@
+{
+ "courseName": "800m",
+ "surface": "Grass",
+ "distance": 800,
+ "units": "Metres",
+ "relayDetails": "No",
+ "minAge31Dec": 1,
+ "id": "43",
+ "handicap": {
+  "factor": null,
+  "cutoff": null
+ }
+}

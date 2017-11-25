@@ -1,0 +1,20 @@
+{
+ "courseName": "3km Road",
+ "location": {
+  "location": "Wollongong Entertainment Centre",
+  "address": "WIN Sports & Entertainment Centres, Corner Crown & Harbour Streets, Wollongong NSW 2000",
+  "latitude": "-34.426487",
+  "longtitude": "150.904125"
+ },
+ "surface": "Road",
+ "distance": 3,
+ "units": "Kilometres",
+ "penaltyBuffer": "0:01:00.00",
+ "relayDetails": "No",
+ "minAge31Dec": 11,
+ "id": "83",
+ "handicap": {
+  "factor": 0.6,
+  "cutoff": 0
+ }
+}

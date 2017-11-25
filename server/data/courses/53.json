@@ -1,0 +1,13 @@
+{
+ "courseName": "3000m Steeplechase (91.4cm)",
+ "surface": "Grass",
+ "distance": 3000,
+ "units": "Metres",
+ "relayDetails": "No",
+ "minAge31Dec": 11,
+ "id": "53",
+ "handicap": {
+  "factor": null,
+  "cutoff": null
+ }
+}

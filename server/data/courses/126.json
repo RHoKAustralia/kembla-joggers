@@ -1,0 +1,20 @@
+{
+ "courseName": "7km XC",
+ "location": {
+  "location": "West Dapto",
+  "address": "LOT 1 Darkes Road, Kembla Grange NSW 2526",
+  "latitude": "-34.477788",
+  "longtitude": "150.795728"
+ },
+ "surface": "Cross Country",
+ "distance": 7,
+ "units": "Kilometres",
+ "penaltyBuffer": "0:01:30.00",
+ "relayDetails": "No",
+ "minAge31Dec": 15,
+ "id": "126",
+ "handicap": {
+  "factor": 1.55,
+  "cutoff": 0
+ }
+}

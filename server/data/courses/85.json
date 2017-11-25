@@ -1,0 +1,14 @@
+{
+ "courseName": "1km XC",
+ "surface": "Cross Country",
+ "distance": 1,
+ "units": "Kilometres",
+ "penaltyBuffer": "0:01:00.00",
+ "relayDetails": "No",
+ "minAge31Dec": 1,
+ "id": "85",
+ "handicap": {
+  "factor": 0.25,
+  "cutoff": 0
+ }
+}

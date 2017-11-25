@@ -1,0 +1,20 @@
+{
+ "courseName": "8km Road",
+ "location": {
+  "location": "Mt Kembla",
+  "address": "Harry Graham Dr, Kembla Heights NSW 2526",
+  "latitude": "-34.411399",
+  "longtitude": "150.813499"
+ },
+ "surface": "Road",
+ "distance": 8,
+ "units": "Kilometres",
+ "penaltyBuffer": "0:01:30.00",
+ "relayDetails": "No",
+ "minAge31Dec": 17,
+ "id": "106",
+ "handicap": {
+  "factor": 1.8,
+  "cutoff": 0
+ }
+}

@@ -1,0 +1,14 @@
+{
+ "courseName": "3km XC",
+ "surface": "Cross Country",
+ "distance": 3,
+ "units": "Kilometres",
+ "penaltyBuffer": "0:01:00.00",
+ "relayDetails": "No",
+ "minAge31Dec": 11,
+ "id": "88",
+ "handicap": {
+  "factor": 0.65,
+  "cutoff": 0
+ }
+}

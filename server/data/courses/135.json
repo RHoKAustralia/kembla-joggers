@@ -1,0 +1,23 @@
+{
+ "courseName": "1-2-3km XC Relay",
+ "location": {
+  "location": "West Dapto",
+  "address": "LOT 1 Darkes Road, Kembla Grange NSW 2526",
+  "latitude": "-34.477788",
+  "longtitude": "150.795728"
+ },
+ "surface": "Cross Country",
+ "distance": 6,
+ "units": "Kilometres",
+ "relayDetails": "Yes",
+ "legs": 3,
+ "leg1": "1km XC",
+ "leg2": "2km XC",
+ "leg3": "3km XC",
+ "minAge31Dec": null,
+ "id": "135",
+ "handicap": {
+  "factor": null,
+  "cutoff": null
+ }
+}

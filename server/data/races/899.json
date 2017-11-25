@@ -1,0 +1,26 @@
+{
+ "open": true,
+ "alternate": false,
+ "junior": false,
+ "pointscore": false,
+ "start": "Mass",
+ "eventId": "270",
+ "id": "899",
+ "placeTimes": [
+  "0:00:42.10",
+  "0:00:42.70",
+  "0:00:43.00",
+  "0:00:43.30",
+  "0:00:50.70",
+  "0:00:51.40"
+ ],
+ "placeContacts": [
+  "1030",
+  "83",
+  "1122",
+  "1759",
+  "2104",
+  "1673"
+ ],
+ "courseId": "8"
+}

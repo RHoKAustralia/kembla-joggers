@@ -1,0 +1,24 @@
+{
+ "courseName": "4 x 100m Relay",
+ "location": {
+  "location": "Kerryn McCann Athletics Track",
+  "address": "Beaton Park, Foley Park, Gwynneville NSW 2500",
+  "latitude": "-34.41892",
+  "longtitude": "150.887939"
+ },
+ "surface": "Track",
+ "distance": 400,
+ "units": "Metres",
+ "relayDetails": "Yes",
+ "legs": 4,
+ "leg1": "100m",
+ "leg2": "100m",
+ "leg3": "100m",
+ "leg4": "100m",
+ "minAge31Dec": null,
+ "id": "5",
+ "handicap": {
+  "factor": null,
+  "cutoff": null
+ }
+}

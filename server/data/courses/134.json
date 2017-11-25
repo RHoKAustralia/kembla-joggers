@@ -1,0 +1,19 @@
+{
+ "courseName": "Marathon",
+ "location": {
+  "location": "West Dapto",
+  "address": "LOT 1 Darkes Road, Kembla Grange NSW 2526",
+  "latitude": "-34.477788",
+  "longtitude": "150.795728"
+ },
+ "surface": "Road",
+ "distance": 42.195,
+ "units": "Kilometres",
+ "relayDetails": "No",
+ "minAge31Dec": 18,
+ "id": "134",
+ "handicap": {
+  "factor": null,
+  "cutoff": null
+ }
+}

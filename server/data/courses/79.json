@@ -1,0 +1,20 @@
+{
+ "courseName": "3km Road",
+ "location": {
+  "location": "Shellharbour Surf Club",
+  "address": "Shellharbour Surf Life Saving Club, Shellharbour NSW 2529",
+  "latitude": "-34.571035",
+  "longtitude": "150.866706"
+ },
+ "surface": "Road",
+ "distance": 3,
+ "units": "Kilometres",
+ "penaltyBuffer": "0:01:00.00",
+ "relayDetails": "No",
+ "minAge31Dec": 11,
+ "id": "79",
+ "handicap": {
+  "factor": 0.6,
+  "cutoff": 0
+ }
+}

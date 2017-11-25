@@ -1,0 +1,18 @@
+{
+ "courseName": "4 x 100m Relay",
+ "surface": "Grass",
+ "distance": 400,
+ "units": "Metres",
+ "relayDetails": "Yes",
+ "legs": 4,
+ "leg1": "100m",
+ "leg2": "100m",
+ "leg3": "100m",
+ "leg4": "100m",
+ "minAge31Dec": null,
+ "id": "34",
+ "handicap": {
+  "factor": null,
+  "cutoff": null
+ }
+}

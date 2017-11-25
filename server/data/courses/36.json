@@ -1,0 +1,13 @@
+{
+ "courseName": "200m Hurdles",
+ "surface": "Grass",
+ "distance": 200,
+ "units": "Metres",
+ "relayDetails": "No",
+ "minAge31Dec": 1,
+ "id": "36",
+ "handicap": {
+  "factor": null,
+  "cutoff": null
+ }
+}

@@ -1,0 +1,14 @@
+{
+ "courseName": "8km XC",
+ "surface": "Cross Country",
+ "distance": 8,
+ "units": "Kilometres",
+ "penaltyBuffer": "0:01:00.00",
+ "relayDetails": "No",
+ "minAge31Dec": 17,
+ "id": "91",
+ "handicap": {
+  "factor": 1.7,
+  "cutoff": 0
+ }
+}

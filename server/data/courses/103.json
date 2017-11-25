@@ -1,0 +1,20 @@
+{
+ "courseName": "4 Mile Road",
+ "location": {
+  "location": "Mt Kembla",
+  "address": "Harry Graham Dr, Kembla Heights NSW 2526",
+  "latitude": "-34.411399",
+  "longtitude": "150.813499"
+ },
+ "surface": "Road",
+ "distance": 4,
+ "units": "Miles",
+ "penaltyBuffer": "0:01:00.00",
+ "relayDetails": "No",
+ "minAge31Dec": 15,
+ "id": "103",
+ "handicap": {
+  "factor": 1.4,
+  "cutoff": 0
+ }
+}

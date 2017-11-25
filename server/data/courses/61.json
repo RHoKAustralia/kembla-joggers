@@ -1,0 +1,20 @@
+{
+ "courseName": "5km XC",
+ "location": {
+  "location": "Willandra",
+  "address": "Browns Mountain Rd, New South Wales 2540",
+  "latitude": "-34.820675",
+  "longtitude": "150.52195"
+ },
+ "surface": "Cross Country",
+ "distance": 5,
+ "units": "Kilometres",
+ "penaltyBuffer": "0:01:00.00",
+ "relayDetails": "No",
+ "minAge31Dec": 12,
+ "id": "61",
+ "handicap": {
+  "factor": 1.1,
+  "cutoff": 0
+ }
+}

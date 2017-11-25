@@ -1,0 +1,19 @@
+{
+ "courseName": "1 Mile",
+ "location": {
+  "location": "Kerryn McCann Athletics Track",
+  "address": "Beaton Park, Foley Park, Gwynneville NSW 2500",
+  "latitude": "-34.41892",
+  "longtitude": "150.887939"
+ },
+ "surface": "Track",
+ "distance": 1,
+ "units": "Miles",
+ "relayDetails": "No",
+ "minAge31Dec": 1,
+ "id": "20",
+ "handicap": {
+  "factor": null,
+  "cutoff": null
+ }
+}

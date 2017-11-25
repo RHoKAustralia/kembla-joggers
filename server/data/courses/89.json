@@ -1,0 +1,14 @@
+{
+ "courseName": "4km XC",
+ "surface": "Cross Country",
+ "distance": 4,
+ "units": "Kilometres",
+ "penaltyBuffer": "0:01:00.00",
+ "relayDetails": "No",
+ "minAge31Dec": 12,
+ "id": "89",
+ "handicap": {
+  "factor": 0.88,
+  "cutoff": 0
+ }
+}

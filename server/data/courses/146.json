@@ -1,0 +1,20 @@
+{
+ "courseName": "8km Road",
+ "location": {
+  "location": "Kanahooka",
+  "address": "60 Lakeside Dr, Kanahooka NSW 2530",
+  "latitude": "-34.501111",
+  "longtitude": "150.81675"
+ },
+ "surface": "Road",
+ "distance": 8,
+ "units": "Kilometres",
+ "penaltyBuffer": "0:01:00.00",
+ "relayDetails": "No",
+ "minAge31Dec": 15,
+ "id": "146",
+ "handicap": {
+  "factor": 1.7,
+  "cutoff": 0
+ }
+}

@@ -1,0 +1,20 @@
+{
+ "courseName": "Half Marathon",
+ "location": {
+  "location": "Kanahooka",
+  "address": "60 Lakeside Dr, Kanahooka NSW 2530",
+  "latitude": "-34.501111",
+  "longtitude": "150.81675"
+ },
+ "surface": "Road",
+ "distance": 21.0975,
+ "units": "Kilometres",
+ "penaltyBuffer": "0:03:30.00",
+ "relayDetails": "No",
+ "minAge31Dec": 18,
+ "id": "148",
+ "handicap": {
+  "factor": 4.88,
+  "cutoff": 1
+ }
+}

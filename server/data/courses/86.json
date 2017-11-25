@@ -1,0 +1,14 @@
+{
+ "courseName": "2km XC",
+ "surface": "Cross Country",
+ "distance": 2,
+ "units": "Kilometres",
+ "penaltyBuffer": "0:01:00.00",
+ "relayDetails": "No",
+ "minAge31Dec": 10,
+ "id": "86",
+ "handicap": {
+  "factor": 0.47,
+  "cutoff": 0
+ }
+}

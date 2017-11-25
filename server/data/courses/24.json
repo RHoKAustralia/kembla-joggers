@@ -1,0 +1,19 @@
+{
+ "courseName": "2000m Steeplechase (91.4cm)",
+ "location": {
+  "location": "Kerryn McCann Athletics Track",
+  "address": "Beaton Park, Foley Park, Gwynneville NSW 2500",
+  "latitude": "-34.41892",
+  "longtitude": "150.887939"
+ },
+ "surface": "Track",
+ "distance": 2000,
+ "units": "Metres",
+ "relayDetails": "No",
+ "minAge31Dec": 10,
+ "id": "24",
+ "handicap": {
+  "factor": null,
+  "cutoff": null
+ }
+}

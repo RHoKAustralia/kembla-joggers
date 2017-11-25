@@ -1,0 +1,20 @@
+{
+ "courseName": "4km XC",
+ "location": {
+  "location": "Mt Kembla",
+  "address": "Harry Graham Dr, Kembla Heights NSW 2526",
+  "latitude": "-34.411399",
+  "longtitude": "150.813499"
+ },
+ "surface": "Cross Country",
+ "distance": 4,
+ "units": "Kilometres",
+ "penaltyBuffer": "0:01:00.00",
+ "relayDetails": "No",
+ "minAge31Dec": 12,
+ "id": "99",
+ "handicap": {
+  "factor": 0.88,
+  "cutoff": 0
+ }
+}

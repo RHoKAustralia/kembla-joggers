@@ -1,0 +1,20 @@
+{
+ "courseName": "12km XC",
+ "location": {
+  "location": "Willandra",
+  "address": "Browns Mountain Rd, New South Wales 2540",
+  "latitude": "-34.820675",
+  "longtitude": "150.52195"
+ },
+ "surface": "Cross Country",
+ "distance": 12,
+ "units": "Kilometres",
+ "penaltyBuffer": "0:02:00.00",
+ "relayDetails": "No",
+ "minAge31Dec": 17,
+ "id": "65",
+ "handicap": {
+  "factor": 2.55,
+  "cutoff": 1
+ }
+}

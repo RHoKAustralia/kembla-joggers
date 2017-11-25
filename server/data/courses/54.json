@@ -1,0 +1,13 @@
+{
+ "courseName": "2 Mile",
+ "surface": "Grass",
+ "distance": 2,
+ "units": "Miles",
+ "relayDetails": "No",
+ "minAge31Dec": 12,
+ "id": "54",
+ "handicap": {
+  "factor": null,
+  "cutoff": null
+ }
+}

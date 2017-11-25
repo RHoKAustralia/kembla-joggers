@@ -1,0 +1,20 @@
+{
+ "courseName": "8km XC",
+ "location": {
+  "location": "Willandra",
+  "address": "Browns Mountain Rd, New South Wales 2540",
+  "latitude": "-34.820675",
+  "longtitude": "150.52195"
+ },
+ "surface": "Cross Country",
+ "distance": 8,
+ "units": "Kilometres",
+ "penaltyBuffer": "0:01:30.00",
+ "relayDetails": "No",
+ "minAge31Dec": 17,
+ "id": "63",
+ "handicap": {
+  "factor": 1.8,
+  "cutoff": 0
+ }
+}

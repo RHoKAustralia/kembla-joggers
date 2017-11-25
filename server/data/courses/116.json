@@ -1,0 +1,20 @@
+{
+ "courseName": "3km Road",
+ "location": {
+  "location": "West Dapto",
+  "address": "LOT 1 Darkes Road, Kembla Grange NSW 2526",
+  "latitude": "-34.477788",
+  "longtitude": "150.795728"
+ },
+ "surface": "Road",
+ "distance": 3,
+ "units": "Kilometres",
+ "penaltyBuffer": "0:01:00.00",
+ "relayDetails": "No",
+ "minAge31Dec": 11,
+ "id": "116",
+ "handicap": {
+  "factor": 0.6,
+  "cutoff": 0
+ }
+}

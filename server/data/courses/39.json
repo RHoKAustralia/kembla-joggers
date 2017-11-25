@@ -1,0 +1,13 @@
+{
+ "courseName": "400m Hurdles",
+ "surface": "Grass",
+ "distance": 400,
+ "units": "Metres",
+ "relayDetails": "No",
+ "minAge31Dec": 1,
+ "id": "39",
+ "handicap": {
+  "factor": null,
+  "cutoff": null
+ }
+}

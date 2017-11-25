@@ -1,0 +1,18 @@
+{
+ "courseName": "4 x 1000m Relay",
+ "surface": "Grass",
+ "distance": 4000,
+ "units": "Metres",
+ "relayDetails": "Yes",
+ "legs": 4,
+ "leg1": "1000m",
+ "leg2": "1000m",
+ "leg3": "1000m",
+ "leg4": "1000m",
+ "minAge31Dec": null,
+ "id": "45",
+ "handicap": {
+  "factor": null,
+  "cutoff": null
+ }
+}

@@ -1,0 +1,14 @@
+{
+ "courseName": "5km XC",
+ "surface": "Cross Country",
+ "distance": 5,
+ "units": "Kilometres",
+ "penaltyBuffer": "0:01:00.00",
+ "relayDetails": "No",
+ "minAge31Dec": 12,
+ "id": "90",
+ "handicap": {
+  "factor": 1.04,
+  "cutoff": 0
+ }
+}

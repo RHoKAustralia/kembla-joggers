@@ -1,0 +1,13 @@
+{
+ "courseName": "2000m Steeplechase (76.2cm)",
+ "surface": "Grass",
+ "distance": 2000,
+ "units": "Metres",
+ "relayDetails": "No",
+ "minAge31Dec": 10,
+ "id": "49",
+ "handicap": {
+  "factor": null,
+  "cutoff": null
+ }
+}

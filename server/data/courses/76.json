@@ -1,0 +1,20 @@
+{
+ "courseName": "5km Road",
+ "location": {
+  "location": "Illawarra Yacht Club",
+  "address": "1 Northcliffe Drive, Warrawong NSW 2502",
+  "latitude": "-34.492085",
+  "longtitude": "150.873001"
+ },
+ "surface": "Road",
+ "distance": 5,
+ "units": "Kilometres",
+ "penaltyBuffer": "0:01:00.00",
+ "relayDetails": "No",
+ "minAge31Dec": 12,
+ "id": "76",
+ "handicap": {
+  "factor": 1,
+  "cutoff": 0
+ }
+}

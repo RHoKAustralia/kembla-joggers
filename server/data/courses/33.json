@@ -1,0 +1,13 @@
+{
+ "courseName": "100m Hurdles",
+ "surface": "Grass",
+ "distance": 100,
+ "units": "Metres",
+ "relayDetails": "No",
+ "minAge31Dec": 1,
+ "id": "33",
+ "handicap": {
+  "factor": null,
+  "cutoff": null
+ }
+}
