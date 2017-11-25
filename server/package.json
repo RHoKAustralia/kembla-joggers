@@ -16,6 +16,9 @@
     "express": "^4.16.2",
     "express-session": "^1.15.6",
     "firebase": "^4.6.2",
+    "node-collections-boilerplate": "^0.2.9",
+    "node-express-boilerplate-nahid": "0.0.7",
+    "node-user-accounts-boilerplate": "^0.3.7",
     "passport": "^0.4.0",
     "yargs": "^10.0.3"
   },
