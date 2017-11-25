@@ -11,8 +11,13 @@ const compression = require('compression');
 const firebase = require('firebase');
 const fs = require('fs');
 const path = require('path');
-require('dotenv').config();
+const auth = require('./misc/auth');
 
+// will read the '.env' dorfile and add config to process.env
+require('dotenv')
+  .config();
+
+// yargs configuration
 const config = yargs
   .options({
     'port': {
@@ -52,6 +57,12 @@ const config = yargs
     },
     firebaseMessagingSenderId: {
       'default': process.env.FIREBASE_MESSAGING_SENDER_ID || '',
+    },
+    tidyHqClientId: {
+      'default': process.env.TIDYHQ_CLIENT_ID || '',
+    },
+    tidyHqClientSecret: {
+      'default': process.env.TIDYHQ_CLIENT_SECRET || '',
     },
     'help': {
       'alias': 'h',
@@ -121,6 +132,7 @@ if (config.static)
   }));
 }
 
+// firebase
 app.firebase = firebase.initializeApp({
   apiKey: config.firebaseApiKey,
   authDomain: config.firebaseAuthDomain,
@@ -130,6 +142,9 @@ app.firebase = firebase.initializeApp({
 });
 
 config.apiPrefix = '/api/v0/';
+
+// authentication
+auth(app, config);
 
 (async() =>
 {
