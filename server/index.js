@@ -9,6 +9,8 @@ const express = require('express');
 const cors = require('cors');
 const compression = require('compression');
 const firebase = require('firebase');
+const fs = require('fs');
+const path = require('path');
 
 const config = yargs
   .options({
@@ -126,4 +128,14 @@ app.firebase = firebase.initializeApp({
   messagingSenderId: config.firebaseMessagingSenderId
 });
 
-app.listen(config.port, () => console.log(`Kemba Joggers is listening on port ${config.port}!`));
+config.apiPrefix = '/api/v0/';
+
+(async () =>
+{
+  for (let file of fs.readdirSync(path.join(path.dirname(__filename), 'api')))
+  {
+    const plugin = require(`./api/${file}`);
+    await plugin(app, config);
+  }
+  app.listen(config.port, () => console.log(`Kemba Joggers is listening on port ${config.port}!`));
+})();
