@@ -8,18 +8,26 @@
     <b-container class="home-container">
       <b-row align-h="center">
         <b-col cols="6" class="home-div">
-          <img src="../assets/contacts.png">
+          <router-link to="/contacts">
+            <img src="../assets/contacts.png">
+          </router-link>
         </b-col>
         <b-col cols="6" class="home-div">
-          <img src="../assets/events.png">
+          <router-link to="/events">
+            <img src="../assets/events.png">
+          </router-link>
         </b-col>
       </b-row>
       <b-row align-h="center">
         <b-col cols="6" class="home-div">
-          <img src="../assets/timer.png">
+          <router-link to="/timer">
+            <img src="../assets/timer.png">
+          </router-link>
         </b-col>
         <b-col cols="6" class="home-div">
-          <img src="../assets/settings.png">
+          <router-link to="/settings">
+            <img src="../assets/settings.png">
+          </router-link>
         </b-col>
       </b-row>
     </b-container>
