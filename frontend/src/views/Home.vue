@@ -7,22 +7,41 @@
 
     <b-container class="home-container">
       <b-row align-h="center">
-        <b-col cols="6" class="home-div">
-          <img src="../assets/contacts.png">
+        <b-col cols="4" class="home-div">
+            <a href="#">
+                <img src="../assets/contacts.png">
+                <h3>MEMBERS</h3>
+            </a>
         </b-col>
-        <b-col cols="6" class="home-div">
-          <img src="../assets/events.png">
+
+        <b-col cols="4" class="home-div">
+          <a href="#">
+
+            <img src="../assets/events.png">
+            <h3>EVENTS</h3>
+          </a>
         </b-col>
       </b-row>
       <b-row align-h="center">
-        <b-col cols="6" class="home-div">
-          <img src="../assets/timer.png">
+        <b-col cols="4" class="home-div">
+          <a href="#">
+            <img src="../assets/timer.png">
+            <h3>RUN TIMER</h3>
+          </a>
         </b-col>
-        <b-col cols="6" class="home-div">
-          <img src="../assets/settings.png">
+        <b-col cols="4" class="home-div">
+          <a href="#">
+            <img src="../assets/settings.png">
+            <h3>SETTINGS</h3>
+          </a>
         </b-col>
       </b-row>
     </b-container>
+
+    <div>
+      <a href="#" class="log-out">Log out: [user]</a>
+    </div>
+
   </div>
 </template>
 
@@ -46,32 +65,40 @@ li {
   display: inline-block;
   margin: 0 10px;
 }
-a {
-  color: #42b983;
+
+h3{
+  color: white;
+  padding: 5px;
 }
 
 .header-div{
   position: fixed;
   top: 0;
   height: inherit;
-  background-color: red;
 }
 
 .home-container{
   position: relative;
-  margin-top: 100px;
-}
-
-.home-div img{
-  height: 70%;
-  width: inherit;
-  position: relative;
-  background-color: #10518a;
-  padding: 20px;
+  margin-top: 150px;
 }
 
 .home-div{
-  margin: 0;
+  position: relative;
+  background-color: #10518a;
+  padding: 100px;
+  border-radius: 15px;
+  height: 110px;
+  width: 120px;
+  margin: 20px;
+}
+
+a {
+  color: #4a4a4a;
+  line-height: 60px;
+
+    &:hover {
+      color: #10518a;
+    }
 }
 
 </style>
