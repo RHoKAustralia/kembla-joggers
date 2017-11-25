@@ -11,6 +11,7 @@ const compression = require('compression');
 const firebase = require('firebase');
 const fs = require('fs');
 const path = require('path');
+require('dotenv').config();
 
 const config = yargs
   .options({
