@@ -1,3 +1,6 @@
+/**
+ * Entry Point
+ */
 "use strict";
 
 const yargs = require('yargs');
@@ -5,6 +8,7 @@ const yargs = require('yargs');
 const express = require('express');
 const cors = require('cors');
 const compression = require('compression');
+const firebase = require('firebase');
 
 const config = yargs
   .options({
@@ -30,6 +34,21 @@ const config = yargs
       'default': Date.now()
         .toString(16),
       'description': 'Enable Static ETAG or not'
+    },
+    firebaseApiKey: {
+      'default': process.env.FIREBASE_API_KEY || '',
+    },
+    firebaseAuthDomain: {
+      'default': process.env.FIREBASE_AUTH_DOMAIN || '',
+    },
+    firebaseDatabaseURL: {
+      'default': process.env.FIREBASE_DATABASE_URL || '',
+    },
+    firebaseStorageBucket: {
+      'default': process.env.FIREBASE_STORAGE_BUCKET || '',
+    },
+    firebaseMessagingSenderId: {
+      'default': process.env.FIREBASE_MESSAGING_SENDER_ID || '',
     },
     'help': {
       'alias': 'h',
@@ -98,5 +117,13 @@ if (config.static)
     lastModified: false
   }));
 }
+
+app.firebase = firebase.initializeApp({
+  apiKey: config.firebaseApiKey,
+  authDomain: config.firebaseAuthDomain,
+  databaseURL: config.firebaseDatabaseURL,
+  storageBucket: config.firebaseStorageBucket,
+  messagingSenderId: config.firebaseMessagingSenderId
+});
 
 app.listen(config.port, () => console.log(`Kemba Joggers is listening on port ${config.port}!`));
