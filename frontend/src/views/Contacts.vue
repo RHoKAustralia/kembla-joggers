@@ -2,9 +2,9 @@
   <div class="container">
     <div class="header-container">
     <router-link to="/">
-      <span >
+      <span class="home-span">
       <i class="fa fa-home home-button"></i>
-      </span>    
+      </span>
     </router-link>
     <img src="../assets/KJlogo.png">
     </div>
@@ -39,7 +39,7 @@ export default {
     editUserClicked: function(user) {
       console.log(user);
       this.selectedUser = user;
-      this.$refs.userEditModal.show()      
+      this.$refs.userEditModal.show()
     }
   },
   mounted() {
@@ -92,4 +92,9 @@ export default {
 .user-edit-modal {
   width:800px;
 }
+
+img {
+  position: inherit;
+}
+
 </style>

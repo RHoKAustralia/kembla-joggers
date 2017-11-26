@@ -7,24 +7,24 @@
 
     <b-container class="home-container">
       <b-row align-h="center">
-        <b-col cols="6" class="home-div">
+        <b-col cols="5" class="home-div">
           <router-link to="/contacts">
             <img src="../assets/contacts.png">
           </router-link>
         </b-col>
-        <b-col cols="6" class="home-div">
+        <b-col cols="5" class="home-div">
           <router-link to="/events">
             <img src="../assets/events.png">
           </router-link>
         </b-col>
       </b-row>
       <b-row align-h="center">
-        <b-col cols="6" class="home-div">
+        <b-col cols="5" class="home-div">
           <router-link to="/timer">
             <img src="../assets/timer.png">
           </router-link>
         </b-col>
-        <b-col cols="6" class="home-div">
+        <b-col cols="5" class="home-div">
           <router-link to="/settings">
             <img src="../assets/settings.png">
           </router-link>
@@ -73,10 +73,17 @@ h3{
 
 .home-container{
   position: relative;
+  display: inline-block;
+  vertical-align: middle;
   margin-top: 150px;
 }
 
+
+
 .home-div{
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
   position: relative;
   background-color: #10518a;
   padding: 100px;
@@ -86,6 +93,11 @@ h3{
   margin: 20px;
 }
 
+img{
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+}
 a {
   color: #4a4a4a;
   line-height: 60px;
