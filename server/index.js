@@ -121,6 +121,9 @@ expressBoilerplate({
       'default': process.env.PORT || 8080,
       'type': 'number'
     },
+    'static': {
+      'default': path.join(path.dirname(__filename), 'public'),
+    },
     'data-endpoint': {
       default: path.join(path.dirname(__filename), 'data') + '/'
     },
