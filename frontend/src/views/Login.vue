@@ -1,7 +1,7 @@
 <template>
   <div class="login-container">
     <div class="logo">
-      <img src="../assets/logo.png">
+      <img src="../assets/KJlogo.png">
     </div>
     <h5>LOGIN</h5>
     <form class="login" action="">
@@ -25,15 +25,14 @@ export default {
 <style scoped>
   .login-container {
     margin: 0 auto;
-    padding: 60px 0;
     width: 100vw;
     height: 100%;
     background-color: #FFFFFF;
   }
 
   h5 {
-    margin-bottom: 20px;
     color: #4a4a4a;
+
   }
 
   .logo {
@@ -46,11 +45,12 @@ export default {
   img {
     width: 100%;
     height: 100%;
+    position: relative;
   }
 
   form {
     float: none;
-    margin: 80px auto 0;
+    margin: 50px auto 0;
     width: 45%;
   }
 
@@ -71,7 +71,7 @@ export default {
     bottom: 0;
     width: 100%;
     height: 60px;
-    background-color: #9B9B9B;
+    background-color: #F0F0F0;
   }
 
   a {
