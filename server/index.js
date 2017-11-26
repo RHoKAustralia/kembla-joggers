@@ -117,6 +117,10 @@ expressBoilerplate({
     'api-prefix': {
       default: '/api/v0'
     },
+    'port': {
+      'default': process.env.PORT || 8080,
+      'type': 'number'
+    },
     'data-endpoint': {
       default: path.join(path.dirname(__filename), 'data') + '/'
     },

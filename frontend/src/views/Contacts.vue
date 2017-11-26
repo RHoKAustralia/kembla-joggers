@@ -1,5 +1,13 @@
 <template>
   <div class="container">
+    <div class="header-container">
+    <router-link to="/">
+      <span >
+      <i class="fa fa-home home-button"></i>
+      </span>    
+    </router-link>
+    <img src="../assets/KJlogo.png">
+    </div>
     <b-card>
       <b-row>
         <b-col cols="6">
@@ -17,6 +25,7 @@
 <script>
 import UserList from '@/components/UserList';
 import UserEditForm from '@/components/UserEditForm';
+import { getUserList } from '../api/index';
 export default {
   name: 'contacts',
   data: () => {
@@ -34,24 +43,25 @@ export default {
     }
   },
   mounted() {
-    const userList = [];
-      for(let i = 0; i < 30; i ++) {
-        const user = {
-          name: Math.random().toString(36).substring(7),
-          status: Math.random() > 0.2 ? 'active' : 'inactive',
-          id: i,
-          barcode: Math.random().toString(36).substring(7),
-          ageGroup: Math.random() > 0.5 ? '20-24' : '50-60'
+    getUserList().then(users => {
+      this.users = users.data.results.map(user => {
+        return {
+          id: user.memberId,
+          status: 'active',
+          name: `${user.firstName} ${user.lastName}`,
         }
-        userList.push(user);
-      }
-      this.users = userList;
+      });
+
+    }).catch(e => {
+      console.log(e);
+    });
   },
   computed: {
     searchedUsers: function() {
       if (this.searchValue) {
         return this.users.filter(user => {
-          return user.name.includes(this.searchValue)
+          const lower = user.name.toLowerCase();
+          return lower.includes(this.searchValue.toLowerCase())
         });
       } else {
         return this.users;
@@ -68,6 +78,15 @@ export default {
 <style scoped>
 .container {
   height: 100%;
+  text-align: left;
+}
+
+.header-container {
+  display: inline-block;
+}
+
+.home-button {
+  font-size: 40px;
 }
 
 .user-edit-modal {

@@ -6,7 +6,7 @@
       <tr>
         <th>Name</th>
         <th>Status</th>
-        <th>Member Number</th>      
+        <th>Member #</th>      
         <th>Barcode</th>
         <th>Age Group</th>
         <th>Edit</th>
@@ -48,6 +48,7 @@ export default {
 }
 table {
     width: 100%;
+    text-align: center;
 }
 
 thead, tbody, tr, td, th { display: block; }
