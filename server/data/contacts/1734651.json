@@ -1,0 +1,62 @@
+{
+ "id": 1734651,
+ "first_name": "Shane",
+ "last_name": "Adams",
+ "nick_name": null,
+ "company": null,
+ "email_address": "shaneadamsuk@hotmail.com",
+ "phone_number": "0466 968 876",
+ "address1": "438 Lawrence Hargrave Drive",
+ "city": "Scarborough",
+ "state": "New South Wales",
+ "country": "Australia",
+ "postcode": "2515",
+ "gender": "male",
+ "birthday": "1972-09-23",
+ "facebook": null,
+ "twitter": null,
+ "details": null,
+ "subscribed": true,
+ "metadata": null,
+ "created_at": "2017-05-14T23:44:21+1000",
+ "updated_at": "2017-05-19T00:58:33+1000",
+ "emergency_contact_person": null,
+ "emergency_contact_number": null,
+ "profile_image": null,
+ "status": "active",
+ "custom_fields": [
+  {
+   "id": "68bcaebb25f5",
+   "title": "Member Number",
+   "type": "string",
+   "value": "1610"
+  },
+  {
+   "id": "9263c455ff8f",
+   "title": "Marshalling Preference",
+   "type": "dropdown",
+   "value": {
+    "id": "781c4c600ba3",
+    "title": "Winter 14 - 19/08/2017"
+   }
+  },
+  {
+   "id": "2c3dc2cb42da",
+   "title": "Life Member",
+   "type": "radio_group",
+   "value": {
+    "id": "87100fe30521",
+    "title": "No"
+   }
+  },
+  {
+   "id": "885f87d97d08",
+   "title": "Club",
+   "type": "radio_group",
+   "value": {
+    "id": "765c4584a313",
+    "title": "Kembla Joggers"
+   }
+  }
+ ]
+}
