@@ -15,7 +15,7 @@ async function update(collection, update)
 {
   try
   {
-    const entity = await collection.readRecord(record);
+    const entity = await collection.readRecord(update);
     for (let field in update)
     {
       if (field != 'id')
@@ -23,10 +23,20 @@ async function update(collection, update)
         entity[field] = update[field];
       }
     }
+    for (let field in entity)
+    {
+      console.log(field, entity[field], update[field])
+      if (field != 'id')
+      {
+        update[field] = entity[field];
+      }
+    }
     await collection.updateRecord(entity);
   } catch (e) {
+    console.log('XXXXX', e)
     await collection.createRecord(update);
   }
+  return update;
 }
 
 module.exports.search = async function (context, collection, req, res)
@@ -51,7 +61,7 @@ module.exports.read = async function (context, collection, req, res)
     request: request.read,
     path: `/contacts/${parseInt(req.params.id)}`
   });
-  update(collection, result);
+  await update(collection, result);
   res.json(result);
 };
 
@@ -59,6 +69,7 @@ module.exports.update = async function (context, collection, req, res)
 {
   try
   {
+    console.log('UPDATE', req.body);
     const entity = await collection.readRecord(req.params);
     const update = req.body;
     for (let field in update)
@@ -69,7 +80,6 @@ module.exports.update = async function (context, collection, req, res)
       }
     }
     await collection.updateRecord(entity);
-    // TODO: update record
     res.json("updated");
   }
   catch (err)
