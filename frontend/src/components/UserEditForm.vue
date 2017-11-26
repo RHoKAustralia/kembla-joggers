@@ -77,7 +77,6 @@ export default {
   background-color: #868e96;
   box-shadow: 0 0 0 0.2rem #868e96;
   border-color: #868e96;
-
 }
 
 .btn-outline-primary{
