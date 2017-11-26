@@ -2,13 +2,14 @@
   <div class="pull-left left-text">
     <h3> {{ user.name }} </h3>
     <b-row>
-      <b-col> <span class="bold-edit-user-text" >Membership Number:</span> {{ user.id }}</b-col>
-      <b-col> <span class="bold-edit-user-text" >Age Group Number:</span> {{ user.ageGroup }}</b-col>
+      <b-col cols="4"> <span class="bold-edit-user-text" >Membership Number:</span> {{ user.id }}</b-col>
+      <b-col cols="4"> <span class="bold-edit-user-text" >Age Group Number:</span> {{ user.ageGroup }}</b-col>
     </b-row>
     <b-row>
-      <b-col>
-        <b-form-radio-group id="btnradios1"
+      <b-col cols="4">
+        <b-form-radio-group id="btnradios2"
                         buttons
+                        button-variant="outline-primary"
                         v-model="selected"
                         :options="statusOptions"
                         name="radiosBtnDefault" />
@@ -24,10 +25,10 @@
             <span class="bold-edit-user-text" > Barcode: </span> {{ user.barcode }}
             <a v-on:click="handleEditClick" href="#"> Add Edit </a>
           </div>
-          
+
       </b-col>
-      <b-col>
-        
+      <b-col cols="3" >
+
       </b-col>
     </b-row>
   </div>
@@ -50,7 +51,7 @@ export default {
       selected: 'active',
       statusOptions: [
         { text: 'Active', value: 'active' },
-        { text: 'Inactive', value: 'inactive' }        
+        { text: 'Inactive', value: 'inactive' }
       ],
       updated: {},
       editBarcode: false,
@@ -67,4 +68,21 @@ export default {
 .bold-edit-user-text {
   font-weight: bold;
 }
+
+.btn{
+  margin: 20px 0;
+}
+
+.btn-outline-primary:not([disabled]):not(.disabled):active, .btn-outline-primary:not([disabled]):not(.disabled).active, .show > .btn-outline-primary.dropdown-toggle {
+  background-color: #868e96;
+  box-shadow: 0 0 0 0.2rem #868e96;
+  border-color: #868e96;
+}
+
+.btn-outline-primary{
+  color: #868e96;
+  border-color: #868e96;
+}
+
+
 </style>

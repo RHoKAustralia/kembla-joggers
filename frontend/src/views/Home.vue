@@ -33,7 +33,7 @@
     </b-container>
 
     <div>
-      <a href="#" class="log-out">Log out: [user]</a>
+      <a href="#" class="logout">Log out: [user]</a>
     </div>
 
   </div>
@@ -75,21 +75,17 @@ h3{
   position: relative;
   display: inline-block;
   vertical-align: middle;
-  margin-top: 150px;
+  margin-top: 80px;
 }
 
-
-
 .home-div{
-  position: relative;
   display: inline-block;
   vertical-align: middle;
   position: relative;
   background-color: #10518a;
-  padding: 100px;
+  padding: 50px;
   border-radius: 15px;
-  height: 110px;
-  width: 120px;
+  width: 50%;
   margin: 20px;
 }
 
@@ -98,6 +94,7 @@ img{
   display: inline-block;
   vertical-align: middle;
 }
+
 a {
   color: #4a4a4a;
   line-height: 60px;
@@ -106,5 +103,15 @@ a {
       color: #10518a;
     }
 }
+
+.logout {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #F0F0F0;
+}
+
 
 </style>
