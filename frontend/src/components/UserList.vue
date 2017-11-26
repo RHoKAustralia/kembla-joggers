@@ -48,6 +48,7 @@ export default {
 }
 table {
     width: 100%;
+    text-align: center;
 }
 
 thead, tbody, tr, td, th { display: block; }

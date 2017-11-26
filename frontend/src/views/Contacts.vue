@@ -1,5 +1,13 @@
 <template>
   <div class="container">
+    <div class="header-container">
+    <router-link to="/">
+      <span >
+      <i class="fa fa-home home-button"></i>
+      </span>    
+    </router-link>
+    <img src="../assets/KJlogo.png">
+    </div>
     <b-card>
       <b-row>
         <b-col cols="6">
@@ -41,7 +49,6 @@ export default {
           id: user.memberId,
           status: 'active',
           name: `${user.firstName} ${user.lastName}`,
-
         }
       });
 
@@ -71,6 +78,15 @@ export default {
 <style scoped>
 .container {
   height: 100%;
+  text-align: left;
+}
+
+.header-container {
+  display: inline-block;
+}
+
+.home-button {
+  font-size: 40px;
 }
 
 .user-edit-modal {

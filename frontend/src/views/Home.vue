@@ -7,33 +7,27 @@
 
     <b-container class="home-container">
       <b-row align-h="center">
-        <b-col cols="4" class="home-div">
-            <a href="#">
-                <img src="../assets/contacts.png">
-                <h3>MEMBERS</h3>
-            </a>
+        <b-col cols="6" class="home-div">
+          <router-link to="/contacts">
+            <img src="../assets/contacts.png">
+          </router-link>
         </b-col>
-
-        <b-col cols="4" class="home-div">
-          <a href="#">
-
+        <b-col cols="6" class="home-div">
+          <router-link to="/events">
             <img src="../assets/events.png">
-            <h3>EVENTS</h3>
-          </a>
+          </router-link>
         </b-col>
       </b-row>
       <b-row align-h="center">
-        <b-col cols="4" class="home-div">
-          <a href="#">
+        <b-col cols="6" class="home-div">
+          <router-link to="/timer">
             <img src="../assets/timer.png">
-            <h3>RUN TIMER</h3>
-          </a>
+          </router-link>
         </b-col>
-        <b-col cols="4" class="home-div">
-          <a href="#">
+        <b-col cols="6" class="home-div">
+          <router-link to="/settings">
             <img src="../assets/settings.png">
-            <h3>SETTINGS</h3>
-          </a>
+          </router-link>
         </b-col>
       </b-row>
     </b-container>
