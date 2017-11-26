@@ -25,7 +25,6 @@ async function update(collection, update)
     }
     for (let field in entity)
     {
-      console.log(field, entity[field], update[field])
       if (field != 'id')
       {
         update[field] = entity[field];

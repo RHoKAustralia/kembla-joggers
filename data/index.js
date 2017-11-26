@@ -4,6 +4,27 @@ const fs = require('fs');
 const load = require('./load');
 const request = require('./request');
 
+const members = JSON.parse(fs.readFileSync('members.json'));
+
+function delay(ms)
+{
+  return new Promise(resolve => setTimeout(ms, resolve));
+}
+
+async function resolveMember(query)
+{
+  if (!members[query])
+  {
+    members[query] = await request.read(`https://api.tidyhq.com/v1/contacts?offset=0&limit=20&search_terms=${query}&access_token=eddd6840685fe63f2644e20e22b47aa528ac4aca764693506fce2d8b36baa6b4`);
+    await delay(500)
+  }
+  if (Object.keys(members).length % 1000 == 0)
+  {
+    fs.writeFileSync('members.json', JSON.stringify(members));
+  }
+  return members[query];
+}
+
 const locations = {};
 for (let location of load('./xlsx/Locations.xlsx'))
 {
@@ -14,6 +35,9 @@ const courses = {};
 const events = {};
 const races = {};
 const contacts = {};
+
+(async () =>
+{
 
 for (let course of load('./xlsx/Courses.xlsx'))
 {
@@ -66,10 +90,12 @@ for (let result of load('./xlsx/Results.xlsx'))
   let contact = Object.values(contacts).filter(contact => contact.firstName === result.firstName && contact.lastName === result.lastName)[0];
   if (!contact)
   {
+    const official = await resolveMember(`${result.firstName} ${result.lastName}`);
+
     contact = {
-      id: Object.keys(contacts).length + '',
-      firstName: result.firstName,
-      lastName: result.lastName,
+      id: (official.length > 0 ? official[0].id : Object.keys(contacts).length) + '',
+      first_ame: result.firstName,
+      last_name: result.lastName,
       memberId: result.id
     }
     contacts[contact.id] = contact
@@ -100,3 +126,7 @@ fs.writeFileSync('data.json', JSON.stringify({
   races,
   contacts
 }))
+
+fs.writeFileSync('members.json', JSON.stringify(members));
+
+})();
