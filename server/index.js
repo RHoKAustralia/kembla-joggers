@@ -83,10 +83,10 @@ async function initialiseAccounts(context)
   // authentication methods
   accounts.auth = [];
 
-  // accounts.loginUserId = 'volunteer';
-  // accounts.TidyHQClientID = context.tidyHqClientId;
-  // accounts.TidyHqTokenURL = context.tidyHqTokenUrl;
-  // accounts.auth.push(new TidyHQAuth(accounts));
+  accounts.TidyHQClientID = context.tidyHqClientId;
+  accounts.TidyHQClientSecret = context.tidyHqClientSecret;
+  accounts.auth.push(new TidyHQAuth(accounts));
+  accounts.auth[0].ctx = context;
 
   userAccountsExpressBoilerplate(context.app, accounts);
 }
@@ -106,6 +106,7 @@ async function initialise(context, done)
     await plugin(context);
   }
 
+  context.accessToken = 'eddd6840685fe63f2644e20e22b47aa528ac4aca764693506fce2d8b36baa6b4'
   done();
 }
 
@@ -124,6 +125,12 @@ expressBoilerplate({
     },
     tidyHqClientSecret: {
       'default': process.env.TIDYHQ_CLIENT_SECRET || '',
+    },
+    tidyHqClientEmail: {
+      'default': process.env.TIDYHQ_CLIENT_EMAIL || '',
+    },
+    tidyHqClientPassword: {
+      'default': process.env.TIDYHQ_CLIENT_PASSWORD || '',
     },
   },
   initialise

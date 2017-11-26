@@ -14,15 +14,15 @@ const request_ = require('request')
 
 function request(method, url, body = undefined)
 {
-  console.log(method, url);
-  const start = Date.now();
   return new Promise((resolve, reject) =>
   {
+    const start = Date.now();
     request_({
       method: method,
       url: url,
       gzip: true,
       json: true,
+      body: body,
       headers: {
         'accept-encoding': 'gzip'
       },

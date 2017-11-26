@@ -15,7 +15,8 @@
     "node-collections-boilerplate": "^0.2.9",
     "node-express-boilerplate-nahid": "0.0.7",
     "node-user-accounts-boilerplate": "^0.3.7",
-    "passport-oauth2": "^1.4.0"
+    "passport-oauth2": "^1.4.0",
+    "request": "^2.83.0"
   },
   "engines": {
     "node": ">=8.0.1",

@@ -37,23 +37,25 @@ class TidyHQAuth extends Auth
    */
   install(app, prefix, passport)
   {
+    console.log({clientID: this.TidyHQClientID,
+    clientSecret: this.TidyHQClientSecret})
     passport.use(new Strategy({
       authorizationURL: 'https://accounts.tidyhq.com/oauth/authorize',
       tokenURL: 'https://accounts.tidyhq.com/oauth/token',
       clientID: this.TidyHQClientID,
       clientSecret: this.TidyHQClientSecret,
       callbackURL: `${prefix}/callback.json`,
-      //scope: ['email', 'profile'],
-      //state: true,
+      scope: [],
+      state: true,
       passReqToCallback: true,
       proxy: true,
     }, (req, accessToken, refreshToken, profile, done) =>
     {
-      console.log(accessToken)
+      this.ctx.accessToken = accessToken;
       this.handleUserLoginByProfile(null, profile, done, req)
     }));
-    app.all(`${prefix}/login.json`, passport.authenticate('oauth2', {}));
-    app.all(`${prefix}/callback.json`, passport.authenticate('oauth2', {}), this.loggedIn(true));
+    app.all(`${prefix}/login.json`, passport.authenticate('oauth2'));
+    app.all(`${prefix}/callback.json`, passport.authenticate('oauth2'), this.loggedIn(true));
   }
 
 }

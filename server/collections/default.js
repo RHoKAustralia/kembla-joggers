@@ -58,7 +58,8 @@ module.exports = {
 
   delete: function (context, collection, req, res)
   {
-    res.resolve(collection.deleteRecord(req.params), "deleted");
+    res.error('NEVER!');
+    // res.resolve(collection.deleteRecord(req.params), "deleted");
   },
 
   search: function (context, collection, req, res)

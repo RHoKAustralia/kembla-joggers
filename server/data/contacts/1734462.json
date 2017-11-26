@@ -1,0 +1,59 @@
+{
+ "id": 1734462,
+ "first_name": "Joshua",
+ "last_name": "Benefiel",
+ "nick_name": null,
+ "company": null,
+ "email_address": "jane.gilbett@ccamatil.com",
+ "phone_number": "0437 786 849",
+ "address1": "34 Owen Street",
+ "city": "Bulli",
+ "state": "New South Wales",
+ "country": "Australia",
+ "postcode": "2516",
+ "gender": "male",
+ "birthday": "2007-02-04",
+ "facebook": null,
+ "twitter": null,
+ "details": null,
+ "subscribed": true,
+ "metadata": null,
+ "created_at": "2017-05-14T23:38:20+1000",
+ "updated_at": "2017-05-19T01:01:55+1000",
+ "emergency_contact_person": "Jane Gilbett",
+ "emergency_contact_number": "0437 786 849",
+ "profile_image": null,
+ "status": "active",
+ "custom_fields": [
+  {
+   "id": "68bcaebb25f5",
+   "title": "Member Number",
+   "type": "string",
+   "value": "1732"
+  },
+  {
+   "id": "2c3dc2cb42da",
+   "title": "Life Member",
+   "type": "radio_group",
+   "value": {
+    "id": "87100fe30521",
+    "title": "No"
+   }
+  },
+  {
+   "id": "885f87d97d08",
+   "title": "Club",
+   "type": "radio_group",
+   "value": {
+    "id": "765c4584a313",
+    "title": "Kembla Joggers"
+   }
+  },
+  {
+   "id": "9263c455ff8f",
+   "title": "Marshalling Preference",
+   "type": "dropdown",
+   "value": null
+  }
+ ]
+}

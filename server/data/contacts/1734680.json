@@ -1,0 +1,68 @@
+{
+ "id": 1734680,
+ "first_name": "Sophie",
+ "last_name": "Bennett",
+ "nick_name": null,
+ "company": null,
+ "email_address": "soph_noelle@hotmail.com",
+ "phone_number": "0403 836 551",
+ "address1": "355 Cordeaux Road",
+ "city": "Mount Kembla",
+ "state": "New South Wales",
+ "country": "Australia",
+ "postcode": "2526",
+ "gender": "female",
+ "birthday": "1993-08-24",
+ "facebook": null,
+ "twitter": null,
+ "details": null,
+ "subscribed": true,
+ "metadata": null,
+ "created_at": "2017-05-14T23:44:26+1000",
+ "updated_at": "2017-05-19T01:12:36+1000",
+ "emergency_contact_person": null,
+ "emergency_contact_number": null,
+ "profile_image": null,
+ "status": "active",
+ "custom_fields": [
+  {
+   "id": "68bcaebb25f5",
+   "title": "Member Number",
+   "type": "string",
+   "value": "1761"
+  },
+  {
+   "id": "9263c455ff8f",
+   "title": "Marshalling Preference",
+   "type": "dropdown",
+   "value": {
+    "id": "d5621ab77276",
+    "title": "No preference"
+   }
+  },
+  {
+   "id": "2c3dc2cb42da",
+   "title": "Life Member",
+   "type": "radio_group",
+   "value": {
+    "id": "87100fe30521",
+    "title": "No"
+   }
+  },
+  {
+   "id": "885f87d97d08",
+   "title": "Club",
+   "type": "radio_group",
+   "value": {
+    "id": "765c4584a313",
+    "title": "Kembla Joggers"
+   }
+  },
+  {
+   "id": "5eca94b5fa2e",
+   "title": "First Aid Qualification",
+   "type": "boolean",
+   "value": true
+  }
+ ]
+}

@@ -1,0 +1,53 @@
+{
+ "id": 1735064,
+ "first_name": "Ryan",
+ "last_name": "Couchman",
+ "nick_name": null,
+ "company": null,
+ "email_address": "ben_bec02@aapt.net.au",
+ "phone_number": "0413 933 894",
+ "address1": "9 Ocean Street",
+ "city": "Thirroul",
+ "state": "New South Wales",
+ "country": "Australia",
+ "postcode": "2515",
+ "gender": "male",
+ "birthday": "2003-09-16",
+ "facebook": null,
+ "twitter": null,
+ "details": null,
+ "subscribed": true,
+ "metadata": null,
+ "created_at": "2017-05-14T23:56:00+1000",
+ "updated_at": "2017-05-19T01:03:56+1000",
+ "emergency_contact_person": null,
+ "emergency_contact_number": null,
+ "profile_image": null,
+ "status": "active",
+ "custom_fields": [
+  {
+   "id": "68bcaebb25f5",
+   "title": "Member Number",
+   "type": "string",
+   "value": "469"
+  },
+  {
+   "id": "2c3dc2cb42da",
+   "title": "Life Member",
+   "type": "radio_group",
+   "value": {
+    "id": "87100fe30521",
+    "title": "No"
+   }
+  },
+  {
+   "id": "885f87d97d08",
+   "title": "Club",
+   "type": "radio_group",
+   "value": {
+    "id": "765c4584a313",
+    "title": "Kembla Joggers"
+   }
+  }
+ ]
+}
