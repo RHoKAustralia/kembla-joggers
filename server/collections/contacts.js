@@ -40,13 +40,21 @@ async function update(collection, update)
 
 module.exports.search = async function (context, collection, req, res)
 {
-  const query = parseFilters(collection.searchMeta, req.query);
-  const results = await tidyhq(context, {
-    request: request.read,
-    path: `/contacts?offset=${query.offset}&limit=${query.limit}&search_terms=${req.query.query || ''}`
-  })
-  await Promise.all(results.map(update.bind(null, collection)));
-  res.json({results});
+  if (req.query.barcode)
+  {
+    const results = Object.values(collection.lookup).filter(value => value.barcode === req.query.barcode);
+    res.json({results});
+  }
+  else
+  {
+    const query = parseFilters(collection.searchMeta, req.query);
+    const results = await tidyhq(context, {
+      request: request.read,
+      path: `/contacts?offset=${query.offset}&limit=${query.limit}&search_terms=${req.query.query || ''}`
+    })
+    await Promise.all(results.map(update.bind(null, collection)));
+    res.json({results});
+  }
 };
 
 module.exports.create = async function (context, collection, req, res)
