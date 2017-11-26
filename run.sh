@@ -8,7 +8,7 @@ npm install
 npm run build
 cd ..
 rm -rf server/public
-modir server/public
+mkdir server/public
 cp -r frontend/dist/* server/public
 
 cd server
